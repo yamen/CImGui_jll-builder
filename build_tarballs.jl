@@ -3,7 +3,7 @@
 using BinaryBuilder
 
 name = "CImGui"
-version = v"1.81.1"
+version = v"1.81.2"
 
 # Collection of sources required to build CImGui
 sources = [
@@ -35,7 +35,7 @@ cd $WORKSPACE/srcdir
 rm cimgui/CMakeLists.txt
 
 # add include cimgui line to cimplot.h
-sed -i '/#define CIMGUI_DEFINE_ENUMS_AND_STRUCTS/ a  #include "cimgui.h"' cimplot/cimplot.h
+sed -i '/#ifdef CIMGUI_DEFINE_ENUMS_AND_STRUCTS/ a  #include "cimgui.h"' cimplot/cimplot.h
 
 # ensure implot headers are available under the target build dir
 mkdir cimgui/implot
