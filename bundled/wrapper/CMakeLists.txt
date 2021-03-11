@@ -33,7 +33,8 @@ set_property(TARGET imgui-cpp APPEND PROPERTY
                   ${CMAKE_CURRENT_SOURCE_DIR}/imgui/imstb_rectpack.h
                   ${CMAKE_CURRENT_SOURCE_DIR}/imgui/imstb_textedit.h
                   ${CMAKE_CURRENT_SOURCE_DIR}/imgui/imstb_truetype.h
-                  ${CMAKE_CURRENT_SOURCE_DIR}/imgui/implot.h
+                  ${CMAKE_CURRENT_SOURCE_DIR}/implot/implot.h
+                  ${CMAKE_CURRENT_SOURCE_DIR}/implot/implot_internal.h
                   )
 
 install(TARGETS imgui-cpp

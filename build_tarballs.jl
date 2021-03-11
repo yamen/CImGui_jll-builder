@@ -3,7 +3,7 @@
 using BinaryBuilder
 
 name = "CImGui"
-version = v"1.81.2"
+version = v"1.81.4"
 
 # Collection of sources required to build CImGui
 sources = [
@@ -16,8 +16,8 @@ sources = [
     GitSource("https://github.com/epezent/implot.git",
               "a9d334791563cdaf9bd0bf7f9899a67bcd03179b"),              
 
-    GitSource("https://github.com/cimgui/cimplot.git",
-              "374317a84121a01868aa5274dbcf1c5a5df96e8c"),              
+    GitSource("https://github.com/yamen/cimplot.git",
+              "48f482bc1f4b780cdc630de69cd7347e17b27b8a"),              
 
     DirectorySource("./bundled"),
 ]
@@ -39,7 +39,7 @@ sed -i '/#ifdef CIMGUI_DEFINE_ENUMS_AND_STRUCTS/ a  #include "cimgui.h"' cimplot
 
 # ensure implot headers are available under the target build dir
 mkdir cimgui/implot
-cp implot/implot.h cimgui/implot/
+cp implot/*.h cimgui/implot/
 
 # make sure all implot files are alongside imgui files
 mv implot/* imgui
