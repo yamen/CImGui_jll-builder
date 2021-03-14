@@ -3,7 +3,7 @@
 using BinaryBuilder
 
 name = "CImGui"
-version = v"1.81.4"
+version = v"1.81.5"
 
 # Collection of sources required to build CImGui
 sources = [
@@ -16,8 +16,8 @@ sources = [
     GitSource("https://github.com/epezent/implot.git",
               "a9d334791563cdaf9bd0bf7f9899a67bcd03179b"),              
 
-    GitSource("https://github.com/yamen/cimplot.git",
-              "48f482bc1f4b780cdc630de69cd7347e17b27b8a"),              
+    GitSource("https://github.com/cimgui/cimplot.git",
+              "3714ad8397ec500d13c843ade297145aca354dcb"),                         
 
     DirectorySource("./bundled"),
 ]
